@@ -1,2 +1,2 @@
-# Automatic Wev Scraping of Teledeporte
+# Automatic Web Scraping of Teledeporte
 Is it really Teletenis? We will see in soon...
