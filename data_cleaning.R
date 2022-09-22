@@ -16,18 +16,21 @@ df <- df %>%
       str_detect(sp_title, "UEFA") ~ "Football",
       str_detect(sp_title, "motociclismo") ~ "Motorbikes",
       str_detect(sp_title, regex("rallycross", ignore_case = T)) ~ "Cars",
-      str_detect(sp_title, regex("basket", ignore_case = T)) ~ "Basket"
+      str_detect(sp_title, regex("basket", ignore_case = T)) ~ "Basket",
+      TRUE ~ sport
     ),
     category = case_when(
       str_detect(sp_title, "FIA") ~ "Motor sports",
       str_detect(sp_title, regex("motociclismo", ignore_case = T)) ~ "Motor sports",
       str_detect(sp_title, regex("wta|atp", ignore_case = T)) ~ "Racket sports",
-      str_detect(sp_title, regex("uefa|fifa", ignore_case = T)) ~ "Team sports"
+      str_detect(sp_title, regex("uefa|fifa", ignore_case = T)) ~ "Team sports",
+      TRUE ~ category
     ),
     gender = case_when(
       str_detect(sp_title, "WTA") ~ "Female",
       str_detect(sp_title, "ATP") ~ "Male",
-      str_detect(sp_title, regex("mujer|femenino", ignore_case = TRUE)) ~ "Female"
+      str_detect(sp_title, regex("mujer|femenino", ignore_case = TRUE)) ~ "Female",
+      TRUE ~ gender
     )
   )
 
