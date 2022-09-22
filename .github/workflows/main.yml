@@ -3,8 +3,8 @@ name: spanishTDTscrape
 
 # Controls when the action will run.
 on:
-  schedule:
-    - cron: '50 14 * * *'
+  push:
+    branches: main
 
 
 jobs: 
@@ -26,6 +26,7 @@ jobs:
         R -e 'install.packages("lubridate")'
         R -e 'install.packages("ggplot2")'
         R -e 'install.packages("rvest")'
+        R -e 'install.packages("readr")'
     # Run R script
     - name: Scrape
       run: Rscript teledeporte_scraper.R
