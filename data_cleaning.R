@@ -26,7 +26,8 @@ df <- df %>%
     ),
     gender = case_when(
       str_detect(sp_title, "WTA") ~ "Female",
-      str_detect(sp_title, "ATP") ~ "Male"
+      str_detect(sp_title, "ATP") ~ "Male",
+      str_detect(sp_title, regex("mujer|femenino", ignore_case = TRUE)) ~ "Female"
     )
   )
 
