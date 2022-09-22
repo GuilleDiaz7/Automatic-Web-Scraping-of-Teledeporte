@@ -46,7 +46,7 @@ df_clean <- df %>%
 
 library(tibble)
 df_clean <- df_clean %>%
-  add_column(category = NA)
+  add_column(category = NA) %>%
   add_column(gender = NA) %>% 
   add_column(subsport = NA) %>% 
   
