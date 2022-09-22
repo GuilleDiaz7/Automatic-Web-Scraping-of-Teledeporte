@@ -5,6 +5,7 @@ library(dplyr)
 library(purrr)
 library(tidyr)
 library(readr)
+library(tibble)
 
 #### LOAD URL ####
 html_data <- read_html("https://www.elmundo.es/television/programacion-tv/teledeporte.html")
