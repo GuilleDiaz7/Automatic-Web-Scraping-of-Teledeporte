@@ -22,14 +22,14 @@ jobs:
     # Set-up R
     - name: Install packages
       run: |
-        R -e 'install.packages("dplyr", repos='http://cran.us.r-project.org')'
-        R -e 'install.packages("tidyr", repos='http://cran.us.r-project.org')'
-        R -e 'install.packages("purrr", repos='http://cran.us.r-project.org')'
-        R -e 'install.packages("lubridate", repos='http://cran.us.r-project.org')'
-        R -e 'install.packages("ggplot2", repos='http://cran.us.r-project.org')'
-        R -e 'install.packages("rvest", repos='http://cran.us.r-project.org')'
-        R -e 'install.packages("readr", repos='http://cran.us.r-project.org')'
-        R -e 'install.packages("tibble", repos='http://cran.us.r-project.org')'
+        R -e 'install.packages("dplyr", repos='http:\/\/cran.us.r-project.org')'
+        R -e 'install.packages("tidyr", repos='http:\/\/cran.us.r-project.org')'
+        R -e 'install.packages("purrr", repos='http:\/\/cran.us.r-project.org')'
+        R -e 'install.packages("lubridate", repos='http:\/\/cran.us.r-project.org')'
+        R -e 'install.packages("ggplot2", repos='http:\/\/cran.us.r-project.org')'
+        R -e 'install.packages("rvest", repos='http:\/\/cran.us.r-project.org')'
+        R -e 'install.packages("readr", repos='http:\/\/cran.us.r-project.org')'
+        R -e 'install.packages("tibble", repos='http:\/\/cran.us.r-project.org')'
     # Run R script
     - name: Scrape
       run: Rscript teledeporte_scraper.R
