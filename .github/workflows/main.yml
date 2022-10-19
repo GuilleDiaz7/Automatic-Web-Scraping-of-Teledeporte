@@ -13,9 +13,11 @@ jobs:
 
     # Load repo and install R
     steps:
-    - uses: actions/checkout@master
-    - uses: r-lib/actions/setup-r@master
-      
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        check-latest: true
       
     # Set-up R
     - name: Install packages
